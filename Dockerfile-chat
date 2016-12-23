@@ -1,0 +1,14 @@
+FROM node:6
+
+MAINTAINER Senio Caires <seniocaires@gmail.com>
+
+ADD socket.io /opt/socket.io
+
+RUN cd /opt/socket.io && npm install \
+    && cd /opt/socket.io/examples/chat && npm install
+
+WORKDIR /opt/socket.io/examples/chat
+
+ENTRYPOINT ["bash", "-c", "npm start"]
+
+EXPOSE 3000
