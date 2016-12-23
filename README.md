@@ -6,3 +6,5 @@ cd docker_nginx_node_socket
 git clone https://github.com/socketio/socket.io.git
 docker-compose up
 ```
+Acesse 
+https://localhost
